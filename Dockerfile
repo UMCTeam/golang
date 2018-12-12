@@ -17,7 +17,7 @@ RUN go get -u github.com/kardianos/govendor
 RUN /data/bin/govendor sync
 
 #构建工程
-RUN go build src/main.go
+RUN go build main.go
 
 #前置运行服务
 CMD ["./main"]
