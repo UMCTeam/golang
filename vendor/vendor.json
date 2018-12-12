@@ -33,6 +33,18 @@
 			"revisionTime": "2017-12-05T05:05:44Z"
 		},
 		{
+			"checksumSHA1": "2g4j0LKpz8IXCaIg/v3iMaFMSpo=",
+			"path": "github.com/gin-contrib/sessions",
+			"revision": "7687b645ca6b8b80eb1b45dc16bfb026e9c04c7d",
+			"revisionTime": "2018-11-24T11:07:24Z"
+		},
+		{
+			"checksumSHA1": "yvHX9yuBI9veodIoTPwtGKX92lM=",
+			"path": "github.com/gin-contrib/sessions/cookie",
+			"revision": "7687b645ca6b8b80eb1b45dc16bfb026e9c04c7d",
+			"revisionTime": "2018-11-24T11:07:24Z"
+		},
+		{
 			"checksumSHA1": "BhMowD2DIKSd9qq8Pzh7Y3mh2/w=",
 			"path": "github.com/gin-contrib/sse",
 			"revision": "22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae",
@@ -103,6 +115,24 @@
 			"path": "github.com/golang/protobuf/proto",
 			"revision": "1d3f30b51784bec5aad268e59fd3c2fc1c2fe73f",
 			"revisionTime": "2018-11-28T19:23:52Z"
+		},
+		{
+			"checksumSHA1": "UrOY9AlJnuaw7zQ+xHzhK/KpCjU=",
+			"path": "github.com/gorilla/context",
+			"revision": "51ce91d2eaddeca0ef29a71d766bb3634dadf729",
+			"revisionTime": "2018-10-12T15:35:48Z"
+		},
+		{
+			"checksumSHA1": "tf+bn/G8sfZq35Bv0ulW/4tbRsE=",
+			"path": "github.com/gorilla/securecookie",
+			"revision": "e65cf8c5df817c89aeb47ecb46064e802e2de943",
+			"revisionTime": "2018-10-10T17:46:47Z"
+		},
+		{
+			"checksumSHA1": "PpSeJbhKEk1lQ7BXjxOiRONU20s=",
+			"path": "github.com/gorilla/sessions",
+			"revision": "12bd4761fc66ac946e16fcc2a32b1e0b066f6177",
+			"revisionTime": "2018-12-08T21:45:19Z"
 		},
 		{
 			"checksumSHA1": "06QLjlX2ZJeOljkejJNxNw2bxrA=",

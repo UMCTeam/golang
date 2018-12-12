@@ -5,9 +5,10 @@ import (
 )
 
 type User struct {
-	Id int64 `xorm: "autoincr notnull unique pk"`
-	Name string
-	RegisterAt int64 `xorm: "created"`
+	Id         int64  `xorm: "autoincr notnull unique pk"`
+	Name       string `xorm: "unique"`
+	Password   string `xorm: notnull`
+	RegisterAt int64  `xorm: "created"`
 }
 
 func (User) TableName() string {
@@ -44,4 +45,9 @@ func (User)GetUsersForName(name string, limit int, start int) (*[]User, error) {
 	}
 
 	return &users, nil
+}
+
+func (User) FindUser(name string, password string) error {
+	var users []User
+	return db.Where("name = ? ", name).And("password = ?", password).Find(&users)
 }
