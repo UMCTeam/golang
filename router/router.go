@@ -1,8 +1,6 @@
 package router
 
 import (
-	"github.com/gin-contrib/sessions"
-	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
 	"myapp/middleware"
 	"myapp/router/rAdmin"
@@ -14,9 +12,9 @@ import (
 func InitRouter() (*gin.Engine, error)  {
 	//服务配置
 	router:= gin.Default()
-	//配置本地存储用于比对session
-	store := cookie.NewStore([]byte("app_secret"))
-	router.Use(sessions.Sessions("session", store))
+
+	//中间件配置
+	router.Use(middleware.SessionStore())
 
 	//配置模板目录
 	router.LoadHTMLGlob("templates/*")

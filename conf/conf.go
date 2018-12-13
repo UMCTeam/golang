@@ -7,8 +7,9 @@ import (
 )
 
 type MyApp struct {
-	Host string
-	Port string
+	Tag     string
+	Host    string
+	Port    string
 	Storage string
 }
 
@@ -19,9 +20,33 @@ type MySql struct {
 	Port     string
 	User     string
 	Password string
+	Database string
+}
+
+func (c *MySql) String() string {
+	mySqlAddr := c.User
+	mySqlAddr += ":" + c.Password
+	mySqlAddr += "@tcp(" + c.Host + ":" + c.Port +")/"
+	mySqlAddr += c.Database
+
+	return mySqlAddr
 }
 
 var MySqlSetting = &MySql{}
+
+type Redis struct {
+	Host     string
+	Password string
+	Port     string
+	Database string
+}
+
+func (c *Redis) String() string {
+	redisAddr := c.Host + ":" + c.Port
+	return redisAddr
+}
+
+var RedisSetting = &Redis{}
 
 var cfg *ini.File
 
@@ -35,9 +60,11 @@ func Step()  {
 
 	cfg.Section("myapp").MapTo(MyAppSetting)
 	cfg.Section("mysql").MapTo(MySqlSetting)
+	cfg.Section("redis").MapTo(RedisSetting)
 
 	//配置存储目录
 	if _, err := os.Stat(MyAppSetting.Storage); err != nil {
 		os.MkdirAll("/data", 755)
 	}
 }
+

@@ -7,17 +7,24 @@ import (
 
 var db *xorm.Engine
 
-func InitDB(driver string, conn string) error{
+func InitDB(driver string, addr string) (*xorm.Engine, error){
 	var err error
 	//连接数据库
-	db, err = xorm.NewEngine(driver, conn)
+	db, err = xorm.NewEngine(driver, addr)
+	if err != nil {
+		return nil, err
+	}
+
 	//改变时区
 	db.TZLocation, _ = time.LoadLocation("Asia/shanghai")
 
-	if err != nil {
-		return  err
+	//打印执行的sql命令
+	db.ShowSQL(true)
+
+	//同步数据库结构
+	if err := db.Sync2(new(User)); err != nil {
+		return nil, err
 	}
 
-	db.ShowSQL(true)
-	return db.Sync2(new(User))
+	return db, nil
 }

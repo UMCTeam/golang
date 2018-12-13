@@ -3,6 +3,12 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "FG2DkqrwE8opKUY+Yh2Akcw4QBo=",
+			"path": "github.com/boj/redistore",
+			"revision": "cd5dcc76aeff9ba06b0a924829fe24fd69cdd517",
+			"revisionTime": "2018-09-17T11:49:10Z"
+		},
+		{
 			"checksumSHA1": "7LyTr+zdkO5pd/DzX6RHR2QwS9w=",
 			"path": "github.com/campoy/embedmd",
 			"revision": "97c13d6e41602fc6e397eb51c45f38069371a969",
@@ -41,6 +47,12 @@
 		{
 			"checksumSHA1": "yvHX9yuBI9veodIoTPwtGKX92lM=",
 			"path": "github.com/gin-contrib/sessions/cookie",
+			"revision": "7687b645ca6b8b80eb1b45dc16bfb026e9c04c7d",
+			"revisionTime": "2018-11-24T11:07:24Z"
+		},
+		{
+			"checksumSHA1": "+BxCjo0QN1f/mc902N5rNc24Yus=",
+			"path": "github.com/gin-contrib/sessions/redis",
 			"revision": "7687b645ca6b8b80eb1b45dc16bfb026e9c04c7d",
 			"revisionTime": "2018-11-24T11:07:24Z"
 		},
@@ -115,6 +127,12 @@
 			"path": "github.com/golang/protobuf/proto",
 			"revision": "1d3f30b51784bec5aad268e59fd3c2fc1c2fe73f",
 			"revisionTime": "2018-11-28T19:23:52Z"
+		},
+		{
+			"checksumSHA1": "S0g+WwDKHe7XVgDmQBeHrdamRpM=",
+			"path": "github.com/gomodule/redigo/redis",
+			"revision": "e8fc0692a7e26a05b06517348ed466349062eb47",
+			"revisionTime": "2018-10-26T00:15:55Z"
 		},
 		{
 			"checksumSHA1": "UrOY9AlJnuaw7zQ+xHzhK/KpCjU=",
