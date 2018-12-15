@@ -52,12 +52,13 @@ var cfg *ini.File
 
 func Step()  {
 	var err error
-	cfg, err = ini.Load("conf/default.ini")
 
+	cfg, err = ini.Load("conf/default.ini")
 	if err != nil {
 		log.Print(err)
 	}
 
+	//获取配置参数
 	cfg.Section("myapp").MapTo(MyAppSetting)
 	cfg.Section("mysql").MapTo(MySqlSetting)
 	cfg.Section("redis").MapTo(RedisSetting)

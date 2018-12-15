@@ -7,9 +7,7 @@ import (
 
 var pool *redis.Pool
 
-
-
-func InitRedis(addr string, password string, database string) (*redis.Pool, error) {
+func InitRedis(addr string, password string, database string) {
 	pool = &redis.Pool{
 		MaxIdle: 3,
 		IdleTimeout: 240 * time.Second,
@@ -32,6 +30,4 @@ func InitRedis(addr string, password string, database string) (*redis.Pool, erro
 			return conn, nil
 		},
 	}
-
-	return pool, nil
 }
